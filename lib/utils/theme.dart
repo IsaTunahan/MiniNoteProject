@@ -5,6 +5,7 @@ class AppTheme {
   //Colors
   static const Color primaryColor = Colors.black;
   static const Color accentColor = Colors.red;
+  static const Color secondaryColor = Colors.white;
 
 
 //Paddinga
