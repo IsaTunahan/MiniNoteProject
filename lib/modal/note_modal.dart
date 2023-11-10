@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class NoteMadel {
+class NoteModel {
   int id;
   String content;
 
-  NoteMadel({
+  NoteModel({
     required this.id,
     required this.content,
   });
