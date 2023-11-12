@@ -4,7 +4,7 @@ import 'package:mini_note_project/widgets/custom_button.dart';
 class NoteDialog {
   static void showAlertDialog(BuildContext context, String title, String initialValue, String buttonText,
       void Function(String) onDialogSubmit) {
-    String updateValue = initialValue;
+    String value = initialValue;
 
     showDialog(
         context: context,
@@ -13,8 +13,8 @@ class NoteDialog {
             title: Text(title),
             content: TextFormField(
               initialValue: initialValue,
-              onChanged: (value) {
-                updateValue = value;
+              onChanged: (newValue) {
+                value = newValue;
               },
             ),
             actions: [
@@ -24,7 +24,7 @@ class NoteDialog {
                     child: CustomButton(
                       buttonText: buttonText,
                       buttonOnPressed: () {
-                        onDialogSubmit(updateValue);
+                        onDialogSubmit(value);
                         Navigator.of(context).pop();
                       },
                     ),

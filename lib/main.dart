@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mini_note_project/view/my_home_page.dart';
-import 'package:mini_note_project/view_modal/note_view_modal.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  final NoteViewModal viewModal = NoteViewModal();
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
+            systemOverlayStyle: SystemUiOverlayStyle.dark,
             color: Colors.redAccent[700],
             centerTitle: true,
             elevation: 0,
@@ -24,9 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: MyHomePage(
-        viewModal: viewModal,
-      ),
+      home: const MyHomePage(),
     );
   }
 }

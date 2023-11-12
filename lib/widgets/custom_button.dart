@@ -5,7 +5,7 @@ class CustomButton extends StatefulWidget {
   const CustomButton({super.key, required this.buttonText, required this.buttonOnPressed});
 
   final String buttonText;
-  final void Function() buttonOnPressed;
+  final Function() buttonOnPressed;
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
