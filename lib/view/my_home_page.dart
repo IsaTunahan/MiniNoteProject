@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   // Update Note
-  void _updateNote(BuildContext context, int index) {
+  void updateNote(BuildContext context, int index) {
     String currentNote = notes[index];
     String title = 'Notunuzu Güncelleyin';
     String buttonText = 'Güncelle';
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     IconButton(
                       onPressed: () {
                         setState(() {
-                          _updateNote(context, index);
+                          updateNote(context, index);
                         });
                       },
                       icon: const Icon(Icons.edit),

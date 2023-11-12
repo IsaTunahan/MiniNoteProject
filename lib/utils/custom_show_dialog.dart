@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_note_project/utils/theme.dart';
 import 'package:mini_note_project/widgets/custom_button.dart';
 
 class NoteDialog {
@@ -10,7 +11,11 @@ class NoteDialog {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(title),
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(width: 5,color: AppTheme.primaryColor),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            title: Center(child: Text(title)),
             content: TextFormField(
               initialValue: initialValue,
               onChanged: (newValue) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mini_note_project/utils/theme.dart';
 import 'package:mini_note_project/view/my_home_page.dart';
 
 void main() {
@@ -16,11 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-            systemOverlayStyle: SystemUiOverlayStyle.dark,
-            color: Colors.redAccent[700],
-            centerTitle: true,
-            elevation: 0,
-            titleTextStyle: Theme.of(context).textTheme.headlineSmall),
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+          color: Colors.redAccent[700],
+          centerTitle: true,
+          elevation: 0,
+          titleTextStyle: Theme.of(context).textTheme.headlineSmall?.copyWith(color: AppTheme.secondaryColor),
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
